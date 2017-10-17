@@ -1,0 +1,84 @@
+/* Custom CSS */
+
+body {
+    background-color: #111111;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    text-align: center;
+    color: #ffffff;
+}
+
+p, ul ol, li {
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #eeeeee;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    color: #DA3B34;
+    margin: 0 0 40px 0;
+}
+
+/* Logo */
+.logo-row {
+    text-align: center;
+}
+
+.logo {
+    width: 350px;
+    height: auto;
+}
+
+
+.question {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.questionMaster {
+    text-align: center;
+}
+
+.timer {
+    color: #DA3B34;
+    font-size: 1.5em;
+}
+
+.timerRemainingText {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+button.answerButton {
+    background-color: #111111;
+    width: 100%;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+}
+
+button.answerButton:hover {
+    color: #111111;
+    background-color: #DA3B34;
+}
+
+
+.answers {
+}
+
+
+
+/*
+
+<input type="radio" value="A" />
+<input type="radio" value="B" />
+<input type="radio" value="C" />
+<input type="radio" value="D" />
+
+*/
