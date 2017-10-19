@@ -20,7 +20,8 @@
             <div class="col-md-12">
 
                 <p><img class="logo" src="assets/images/the-last-trivia.png"></p>
-
+                <p class="pTimer"><span class="timer"></span><span class="timerRemainingText"> Seconds Remaining</span></p>
+                <p><button id="startButton">START</button></p>
             </div>
         </div>
 
@@ -28,10 +29,13 @@
             <div class="column col-md-12">
 
                 <!-- Question 1 -->
-                <div id="Q1">
+
+                <div id="Q1" class="Q">
                     <h1 id="questionNumber1"></h1>
                     <h2 id="question1"></h2>
-                    <p><span class="timer">10</span><span class="timerRemainingText"> Seconds Remaining</span></p>
+                    <div class="correct"></div>
+                    <div class="wrong"></div>
+                    <div class="Q1theFourQuestions">
                     <p>
                         <button class="answerButton answer1A"></button>
                     </p>
@@ -44,32 +48,30 @@
                     <p>
                         <button class="answerButton answer1D"></button>
                     </p>
+                    </div>
                 </div>
 
                 <!-- Question 2 -->
-                <div id="Q2">
+
+                <div id="Q2" class="Q">
                     <h1 id="questionNumber2"></h1>
                     <h2 id="question2"></h2>
-                    <p><span class="timer">10</span><span class="timerRemainingText"> Seconds Remaining</span></p>
-                    <p>
-                        <button class="answerButton answer2A"></button>
-                    </p>
-                    <p>
-                        <button class="answerButton answer2B"></button>
-                    </p>
-                    <p>
-                        <button class="answerButton answer2C"></button>
-                    </p>
-                    <p>
-                        <button class="answerButton answer2D"></button>
-                    </p>
+                    <div class="correct"></div>
+                    <div class="wrong"></div>
+                    <div class="Q2theFourQuestions">
+                    <p><button class="answerButton answer2A"></button></p>
+                    <p><button class="answerButton answer2B"></button></p>
+                    <p><button class="answerButton answer2C"></button></p>
+                    <p><button class="answerButton answer2D"></button></p>
+                    </div>
                 </div>
 
                 <!-- Question 3 -->
-                <div id="Q3">
+                <div id="Q3" class="Q">
                     <h1 id="questionNumber3"></h1>
                     <h2 id="question3"></h2>
-                    <p><span class="timer">10</span><span class="timerRemainingText"> Seconds Remaining</span></p>
+                    <div class="correct"></div>
+                    <div class="wrong"></div>
                     <p>
                         <button class="answerButton answer3A"></button>
                     </p>
@@ -85,10 +87,11 @@
                 </div>
 
                 <!-- Question 4 -->
-                <div id="Q4">
+                <div id="Q4" class="Q">
                     <h1 id="questionNumber4"></h1>
                     <h2 id="question4"></h2>
-                    <p><span class="timer">10</span><span class="timerRemainingText"> Seconds Remaining</span></p>
+                    <div class="correct"><p class="correctFont"></p></div>
+                    <div class="wrong"><p class="wrongFont"></div>
                     <p>
                         <button class="answerButton answer4A"></button>
                     </p>
@@ -104,10 +107,11 @@
                 </div>
 
                 <!-- Question 5 -->
-                <div id="Q5">
+                <div id="Q5" class="Q">
                     <h1 id="questionNumber5"></h1>
                     <h2 id="question5"></h2>
-                    <p><span class="timer">10</span><span class="timerRemainingText"> Seconds Remaining</span></p>
+                    <div class="correct"></div>
+                    <div class="wrong"></div>
                     <p>
                         <button class="answerButton answer5A"></button>
                     </p>

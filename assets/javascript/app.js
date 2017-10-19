@@ -1,5 +1,47 @@
 $(document).ready(function () {
 
+
+    $(".pTimer").hide();
+    // Hide questionsRow
+    $("#questionsRow").hide();
+    // Hide ALL
+    $("#Q1").hide();
+    $("#Q2").hide();
+    $("#Q3").hide();
+    $("#Q4").hide();
+    $("#Q5").hide();
+
+    // Start Button
+    $(document).ready(function () {
+        $("#startButton").click(function () {
+            $("#questionsRow").show();
+
+            $(".pTimer").show();
+            var count = 60, timer = setInterval(function () {
+                $(".timer").html(count--);
+                if (count === 0) clearInterval(timer);
+            }, 1000);
+            $("#startButton").hide();
+
+            $("#Q1").show();
+
+
+        });
+
+        runQ1();
+
+        runQ2();
+
+        runQ3();
+
+        runQ4();
+
+        runQ5();
+
+
+    });
+
+
     var Q1 = {
         questionNumber1: "#1",
         question1: "Who is Luke's Daddy, and what does he do?",
@@ -51,9 +93,6 @@ $(document).ready(function () {
     };
 
 
-
-
-
     // Question 1
     function runQ1() {
         $("#questionNumber1").text("Question " + Q1.questionNumber1 + " of 5");
@@ -65,7 +104,6 @@ $(document).ready(function () {
         answerCheck1();
     }
 
-    runQ1();
 
     // Question 2
     function runQ2() {
@@ -78,7 +116,6 @@ $(document).ready(function () {
         answerCheck2();
     }
 
-    runQ2();
 
     // Question 3
     function runQ3() {
@@ -91,7 +128,6 @@ $(document).ready(function () {
         answerCheck3();
     }
 
-    runQ3();
 
     // Question 4
     function runQ4() {
@@ -104,7 +140,6 @@ $(document).ready(function () {
         answerCheck4();
     }
 
-    runQ4();
 
     // Question 5
     function runQ5() {
@@ -117,18 +152,39 @@ $(document).ready(function () {
         answerCheck5();
     }
 
-    runQ5();
-
-
-
-
-
 
 
 
     ///////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////
+
+    function correct() {
+        $(".Q1theFourQuestions").hide();
+
+        setTimeout(function () {
+            $(".correct").text("CORRECT!").hide(3000);
+        });
+
+        $("#Q1").hide();
+        $("#Q2").show();
+
+
+
+
+    }
+
+    function wrong() {
+        $(".Q1theFourQuestions").hide();
+        setTimeout(function () {
+            $(".wrong").text("WRONG!").animate().hide(3000)
+        });
+        $("#Q1").hide();
+        $("#Q2").show();
+
+    }
+
+
     ///////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////
 
@@ -138,36 +194,36 @@ $(document).ready(function () {
         $(".answer1A").on("click", function () {
 
             if (Q1.rightAnswer1 === "A") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer1B").on("click", function () {
 
             if (Q1.rightAnswer1 === "B") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer1C").on("click", function () {
 
             if (Q1.rightAnswer1 === "C") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer1D").on("click", function () {
 
-            if (Q1.rightAnswer1 === "C") {
-                alert("Correct!");
+            if (Q1.rightAnswer1 === "D") {
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
@@ -180,36 +236,36 @@ $(document).ready(function () {
         $(".answer2A").on("click", function () {
 
             if (Q2.rightAnswer2 === "A") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer2B").on("click", function () {
 
             if (Q2.rightAnswer2 === "B") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer2C").on("click", function () {
 
             if (Q2.rightAnswer2 === "C") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer2D").on("click", function () {
 
-            if (Q2.rightAnswer2 === "C") {
-                alert("Correct!");
+            if (Q2.rightAnswer2 === "D") {
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
@@ -222,36 +278,36 @@ $(document).ready(function () {
         $(".answer3A").on("click", function () {
 
             if (Q3.rightAnswer3 === "A") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer3B").on("click", function () {
 
             if (Q3.rightAnswer3 === "B") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer3C").on("click", function () {
 
             if (Q3.rightAnswer3 === "C") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer3D").on("click", function () {
 
-            if (Q3.rightAnswer3 === "C") {
-                alert("Correct!");
+            if (Q3.rightAnswer3 === "D") {
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
@@ -264,36 +320,36 @@ $(document).ready(function () {
         $(".answer4A").on("click", function () {
 
             if (Q4.rightAnswer4 === "A") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer4B").on("click", function () {
 
             if (Q4.rightAnswer4 === "B") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer4C").on("click", function () {
 
             if (Q4.rightAnswer4 === "C") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer4D").on("click", function () {
 
-            if (Q4.rightAnswer4 === "C") {
-                alert("Correct!");
+            if (Q4.rightAnswer4 === "D") {
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
@@ -306,36 +362,36 @@ $(document).ready(function () {
         $(".answer5A").on("click", function () {
 
             if (Q5.rightAnswer5 === "A") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer5B").on("click", function () {
 
             if (Q5.rightAnswer5 === "B") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer5C").on("click", function () {
 
             if (Q5.rightAnswer5 === "C") {
-                alert("Correct!");
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
         $(".answer5D").on("click", function () {
 
-            if (Q5.rightAnswer5 === "C") {
-                alert("Correct!");
+            if (Q5.rightAnswer5 === "D") {
+                correct()
             } else {
-                alert("WRONG!!!!!!!");
+                wrong()
             }
         });
 
@@ -344,5 +400,6 @@ $(document).ready(function () {
 
 
 });
+
 
 
