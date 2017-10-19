@@ -156,7 +156,7 @@ $(document).ready(function () {
 
     // Question 1
     function runQ1() {
-        $("#questionNumber1").text("Question " + Q1.questionNumber1 + " of 5");
+        $("#questionNumber1").text("Question " + Q1.questionNumber1 + " of 10");
         $("#question1").text(Q1.question1);
         $(".answer1A").text(Q1.answer1A);
         $(".answer1B").text(Q1.answer1B);
@@ -167,7 +167,7 @@ $(document).ready(function () {
 
     // Question 2
     function runQ2() {
-        $("#questionNumber2").text("Question " + Q2.questionNumber2 + " of 5");
+        $("#questionNumber2").text("Question " + Q2.questionNumber2 + " of 10");
         $("#question2").text(Q2.question2);
         $(".answer2A").text(Q2.answer2A);
         $(".answer2B").text(Q2.answer2B);
@@ -178,7 +178,7 @@ $(document).ready(function () {
 
     // Question 3
     function runQ3() {
-        $("#questionNumber3").text("Question " + Q3.questionNumber3 + " of 5");
+        $("#questionNumber3").text("Question " + Q3.questionNumber3 + " of 10");
         $("#question3").text(Q3.question3);
         $(".answer3A").text(Q3.answer3A);
         $(".answer3B").text(Q3.answer3B);
@@ -189,7 +189,7 @@ $(document).ready(function () {
 
     // Question 4
     function runQ4() {
-        $("#questionNumber4").text("Question " + Q4.questionNumber4 + " of 5");
+        $("#questionNumber4").text("Question " + Q4.questionNumber4 + " of 10");
         $("#question4").text(Q4.question4);
         $(".answer4A").text(Q4.answer4A);
         $(".answer4B").text(Q4.answer4B);
@@ -200,7 +200,7 @@ $(document).ready(function () {
 
     // Question 5
     function runQ5() {
-        $("#questionNumber5").text("Question " + Q5.questionNumber5 + " of 5");
+        $("#questionNumber5").text("Question " + Q5.questionNumber5 + " of 10");
         $("#question5").text(Q5.question5);
         $(".answer5A").text(Q5.answer5A);
         $(".answer5B").text(Q5.answer5B);
@@ -211,7 +211,7 @@ $(document).ready(function () {
 
     // Question 6
     function runQ6() {
-        $("#questionNumber6").text("Question " + Q6.questionNumber6 + " of 6");
+        $("#questionNumber6").text("Question " + Q6.questionNumber6 + " of 10");
         $("#question6").text(Q6.question6);
         $(".answer6A").text(Q6.answer6A);
         $(".answer6B").text(Q6.answer6B);
@@ -222,7 +222,7 @@ $(document).ready(function () {
 
     // Question 7
     function runQ7() {
-        $("#questionNumber7").text("Question " + Q7.questionNumber7 + " of 7");
+        $("#questionNumber7").text("Question " + Q7.questionNumber7 + " of 10");
         $("#question7").text(Q7.question7);
         $(".answer7A").text(Q7.answer7A);
         $(".answer7B").text(Q7.answer7B);
@@ -233,7 +233,7 @@ $(document).ready(function () {
 
     // Question 8
     function runQ8() {
-        $("#questionNumber8").text("Question " + Q8.questionNumber8 + " of 8");
+        $("#questionNumber8").text("Question " + Q8.questionNumber8 + " of 10");
         $("#question8").text(Q8.question8);
         $(".answer8A").text(Q8.answer8A);
         $(".answer8B").text(Q8.answer8B);
@@ -244,7 +244,7 @@ $(document).ready(function () {
 
     // Question 9
     function runQ9() {
-        $("#questionNumber9").text("Question " + Q9.questionNumber9 + " of 9");
+        $("#questionNumber9").text("Question " + Q9.questionNumber9 + " of 10");
         $("#question9").text(Q9.question9);
         $(".answer9A").text(Q9.answer9A);
         $(".answer9B").text(Q9.answer9B);

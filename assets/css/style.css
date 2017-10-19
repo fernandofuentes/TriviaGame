@@ -40,6 +40,7 @@ h2 {
 }
 
 .logo {
+    margin-top: 50px;
 width: 70%;
 }
 
@@ -102,6 +103,7 @@ button.answerButton:hover {
 }
 
 button#startButton {
+    margin-top:50px;
     background-color: #eeeeee;
     color: #222222;
     font-size: 1.5em;
