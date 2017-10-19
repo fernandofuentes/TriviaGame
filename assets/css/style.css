@@ -8,9 +8,6 @@ body {
     background-attachment: fixed;
 }
 
-.container {
-    width: 40%;
-}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,8 +40,7 @@ h2 {
 }
 
 .logo {
-    width: 350px;
-    height: auto;
+width: 70%;
 }
 
 .question {
@@ -106,17 +102,18 @@ button.answerButton:hover {
 }
 
 button#startButton {
-    background-color: red;
-    color: #ffffff;
-    font-size: 2em;
-    width: 151px;
-    border-radius: 20px;
-    border: 2px solid #ffffff;
+    background-color: #eeeeee;
+    color: #222222;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    padding: 10px 25px 10px 25px;
+
 }
 
 button#startButton:hover {
     background-color: lime;
-    color: #000000;
+    color: #040404;
 }
 
 .pTimer {

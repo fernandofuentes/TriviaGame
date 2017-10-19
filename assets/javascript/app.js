@@ -14,33 +14,25 @@ $(document).ready(function () {
     // Start Button
     $(document).ready(function () {
         $("#startButton").click(function () {
-            $("#questionsRow").show();
 
+            $('#kylo').get(0).play();
+
+            $("#questionsRow").show();
             $(".pTimer").show();
             var count = 60, timer = setInterval(function () {
                 $(".timer").html(count--);
                 if (count === 0) clearInterval(timer);
             }, 1000);
             $("#startButton").hide();
-
             $("#Q1").show();
-
-
         });
 
         runQ1();
-
         runQ2();
-
         runQ3();
-
         runQ4();
-
         runQ5();
-
-
     });
-
 
     var Q1 = {
         questionNumber1: "#1",
@@ -92,7 +84,6 @@ $(document).ready(function () {
         rightAnswer5: "A"
     };
 
-
     // Question 1
     function runQ1() {
         $("#questionNumber1").text("Question " + Q1.questionNumber1 + " of 5");
@@ -103,7 +94,6 @@ $(document).ready(function () {
         $(".answer1D").text(Q1.answer1D);
         answerCheck1();
     }
-
 
     // Question 2
     function runQ2() {
@@ -116,7 +106,6 @@ $(document).ready(function () {
         answerCheck2();
     }
 
-
     // Question 3
     function runQ3() {
         $("#questionNumber3").text("Question " + Q3.questionNumber3 + " of 5");
@@ -128,7 +117,6 @@ $(document).ready(function () {
         answerCheck3();
     }
 
-
     // Question 4
     function runQ4() {
         $("#questionNumber4").text("Question " + Q4.questionNumber4 + " of 5");
@@ -139,7 +127,6 @@ $(document).ready(function () {
         $(".answer4D").text(Q4.answer4D);
         answerCheck4();
     }
-
 
     // Question 5
     function runQ5() {
@@ -161,17 +148,11 @@ $(document).ready(function () {
 
     function correct() {
         $(".Q1theFourQuestions").hide();
-
         setTimeout(function () {
             $(".correct").text("CORRECT!").hide(3000);
         });
-
         $("#Q1").hide();
         $("#Q2").show();
-
-
-
-
     }
 
     function wrong() {
@@ -181,7 +162,6 @@ $(document).ready(function () {
         });
         $("#Q1").hide();
         $("#Q2").show();
-
     }
 
 
@@ -190,9 +170,7 @@ $(document).ready(function () {
 
     // ANSWER CHECK 1
     function answerCheck1() {
-
         $(".answer1A").on("click", function () {
-
             if (Q1.rightAnswer1 === "A") {
                 correct()
             } else {
@@ -201,7 +179,6 @@ $(document).ready(function () {
         });
 
         $(".answer1B").on("click", function () {
-
             if (Q1.rightAnswer1 === "B") {
                 correct()
             } else {
@@ -210,7 +187,6 @@ $(document).ready(function () {
         });
 
         $(".answer1C").on("click", function () {
-
             if (Q1.rightAnswer1 === "C") {
                 correct()
             } else {
@@ -219,22 +195,17 @@ $(document).ready(function () {
         });
 
         $(".answer1D").on("click", function () {
-
             if (Q1.rightAnswer1 === "D") {
                 correct()
             } else {
                 wrong()
             }
         });
-
-
     }
 
     // ANSWER CHECK 2
     function answerCheck2() {
-
         $(".answer2A").on("click", function () {
-
             if (Q2.rightAnswer2 === "A") {
                 correct()
             } else {
@@ -243,7 +214,6 @@ $(document).ready(function () {
         });
 
         $(".answer2B").on("click", function () {
-
             if (Q2.rightAnswer2 === "B") {
                 correct()
             } else {
@@ -252,7 +222,6 @@ $(document).ready(function () {
         });
 
         $(".answer2C").on("click", function () {
-
             if (Q2.rightAnswer2 === "C") {
                 correct()
             } else {
@@ -268,15 +237,12 @@ $(document).ready(function () {
                 wrong()
             }
         });
-
-
     }
 
     // ANSWER CHECK 3
     function answerCheck3() {
 
         $(".answer3A").on("click", function () {
-
             if (Q3.rightAnswer3 === "A") {
                 correct()
             } else {
@@ -285,7 +251,6 @@ $(document).ready(function () {
         });
 
         $(".answer3B").on("click", function () {
-
             if (Q3.rightAnswer3 === "B") {
                 correct()
             } else {
@@ -294,7 +259,6 @@ $(document).ready(function () {
         });
 
         $(".answer3C").on("click", function () {
-
             if (Q3.rightAnswer3 === "C") {
                 correct()
             } else {
@@ -303,15 +267,12 @@ $(document).ready(function () {
         });
 
         $(".answer3D").on("click", function () {
-
             if (Q3.rightAnswer3 === "D") {
                 correct()
             } else {
                 wrong()
             }
         });
-
-
     }
 
     // ANSWER CHECK 4
@@ -352,8 +313,6 @@ $(document).ready(function () {
                 wrong()
             }
         });
-
-
     }
 
     // ANSWER CHECK 5
@@ -394,11 +353,7 @@ $(document).ready(function () {
                 wrong()
             }
         });
-
-
     }
-
-
 });
 
 
