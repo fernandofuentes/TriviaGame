@@ -1,9 +1,12 @@
 /* Custom CSS */
 
 body {
-    background-color: #111111;
+    background-image: url("");
+    background-color: #cccccc;
 }
-h1,h2,h3,h4,h5,h6 {
+
+
+h1, h2, h3, h4, h5, h6 {
     font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -17,9 +20,11 @@ p, ul ol, li {
     font-weight: 500;
     color: #eeeeee;
 }
+
 h1 {
     font-size: 2em;
 }
+
 h2 {
     color: #DA3B34;
     margin: 0 0 40px 0;
@@ -34,7 +39,6 @@ h2 {
     width: 350px;
     height: auto;
 }
-
 
 .question {
     display: block;
@@ -56,8 +60,15 @@ h2 {
     color: #ffffff;
     font-size: 1.5em;
 }
+
+p button {
+    text-align: center;
+}
+
 button.answerButton {
+    text-align: center;
     background-color: #111111;
+    font-size: 2em;
     width: 100%;
     margin: 0 0 15px 0;
     color: #ffffff;
@@ -68,11 +79,8 @@ button.answerButton:hover {
     background-color: #DA3B34;
 }
 
-
 .answers {
 }
-
-
 
 /*
 
