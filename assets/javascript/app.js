@@ -1,3 +1,28 @@
+/*
+                       .-.
+                      |_:_|
+                     /(_Y_)\
+                    ( \/M\/ )
+ '.               _.'-/'-'\-'._
+   ':           _/.--'[[[[]'--.\_
+     ':        /_'  : |::"| :  '.\
+       ':     //   ./ |oUU| \.'  :\
+         ':  _:'..' \_|___|_/ :   :|
+           ':.  .'  |_[___]_|  :.':\
+            [::\ |  :  | |  :   ; : \
+             '-'   \/'.| |.' \  .;.' |
+             |\_    \  '-'   :       |
+             |  \    \ .:    :   |   |
+             |   \    | '.   :    \  |
+             /       \   :. .;       |
+            /     |   |  :__/     :  \\
+           |  |   |    \:   | \   |   ||
+          /    \  : :  |:   /  |__|   /|
+          |     : : :_/_|  /'._\  '--|_\
+          /___.-/_|-'   \  \
+                         '-'
+ */
+
 $(document).ready(function () {
 
 
@@ -18,137 +43,139 @@ $(document).ready(function () {
 
     // Start Button
 
-        $("#startButton").click(function () {
+    $("#startButton").click(function () {
 
-            $('#kylo').get(0).play();
+        $('#kylo').get(0).play();
 
-            $("#questionsRow").show();
-            $(".pTimer").show();
+        $("#questionsRow").show();
+        $(".pTimer").show();
 
-            var count = 60, timer = setInterval(function () {
-                $(".timer").html(count--);
-                if (count === 0) clearInterval(timer);
-            }, 1000);
+        var count = 60, timer = setInterval(function () {
+            $(".timer").html(count--);
+            if (count === 0) clearInterval(timer);
+        }, 1000);
 
-            $("#startButton").hide();
-            $("#Q1").show();
+        $("#startButton").hide();
+        $("#Q1").show();
 
-            runQ1();
-            runQ2();
-            runQ3();
-            runQ4();
-            runQ5();
-            runQ6();
-            runQ7();
-            runQ8();
-            runQ9();
-            runQ10();
-        });
+        runQ1();
+        runQ2();
+        runQ3();
+        runQ4();
+        runQ5();
+        runQ6();
+        runQ7();
+        runQ8();
+        runQ9();
+        runQ10();
+    });
+
+    var correctScore = 0;
+    var wrongScore = 0;
 
 
-
+    $("#numberCorrect").text(correctScore);
+    $("#numberWrong").text(wrongScore);
 
     var Q1 = {
         questionNumber1: "#1",
-        question1: "Who is Luke's Daddy, and what does he do?",
-        answer1A: "This is answer A",
-        answer1B: "This is answer B",
-        answer1C: "This is answer C",
-        answer1D: "This is answer D",
+        question1: "Who is Luke's Daddy?",
+        answer1A: "Anakin",
+        answer1B: "Darth Fader",
+        answer1C: "Darth Mader",
+        answer1D: "Darth Wader",
         rightAnswer1: "A"
     };
 
     var Q2 = {
         questionNumber2: "#2",
-        question2: "What is the Question 2 ?",
-        answer2A: "This is answer A",
-        answer2B: "This is answer B",
-        answer2C: "This is answer C",
-        answer2D: "This is answer D",
-        rightAnswer2: "B"
+        question2: "Who directed the Star Wars movies?",
+        answer2A: "J K Rowling",
+        answer2B: "Charles Dickens",
+        answer2C: "William Shakespeare",
+        answer2D: "George Lucas",
+        rightAnswer2: "D"
     };
 
     var Q3 = {
-        questionNumber3: "Question #3",
-        question3: "What is the Question 3 ?",
-        answer3A: "This is answer A",
-        answer3B: "This is answer B",
-        answer3C: "This is answer C",
-        answer3D: "This is answer D",
-        rightAnswer3: "C"
+        questionNumber3: "#3",
+        question3: "What species is Count Dooku?",
+        answer3A: "Martian",
+        answer3B: "Humanoid",
+        answer3C: "Wookiee",
+        answer3D: "Gungan",
+        rightAnswer3: "B"
     };
 
     var Q4 = {
-        questionNumber4: "Question #4",
-        question4: "What is the Question 4 ?",
-        answer4A: "This is answer A",
-        answer4B: "This is answer B",
-        answer4C: "This is answer C",
-        answer4D: "This is answer D",
-        rightAnswer4: "D"
+        questionNumber4: "#4",
+        question4: "Who were the apprentices of Darth Sidious?",
+        answer4A: "Maul, Vader",
+        answer4B: "Anakin, Luke",
+        answer4C: "Darth Jedi, Darth Sith",
+        answer4D: "Darth Fader, Darth Mader",
+        rightAnswer4: "A"
     };
 
     var Q5 = {
-        questionNumber5: "Question #5",
-        question5: "What is the Question 5 ?",
-        answer5A: "This is answer A",
-        answer5B: "This is answer B",
-        answer5C: "This is answer C",
-        answer5D: "This is answer D",
-        rightAnswer5: "A"
+        questionNumber5: "#5",
+        question5: "How many Death Stars were built?",
+        answer5A: "1",
+        answer5B: "2",
+        answer5C: "5",
+        answer5D: "1 for every movie",
+        rightAnswer5: "B"
     };
 
     var Q6 = {
         questionNumber6: "#6",
-        question6: "What is the Question 6 ?",
-        answer6A: "This is answer A",
-        answer6B: "This is answer B",
-        answer6C: "This is answer C",
-        answer6D: "This is answer D",
-        rightAnswer1: "A"
+        question6: "Who is fluent in over 6,000,000 forms of communication",
+        answer6A: "C-3PO",
+        answer6B: "R2-D2",
+        answer6C: "R4-P17",
+        answer6D: "Jar Jar",
+        rightAnswer6: "A"
     };
 
     var Q7 = {
         questionNumber7: "#7",
-        question7: "What is the Question 7 ?",
-        answer7A: "This is answer A",
-        answer7B: "This is answer B",
-        answer7C: "This is answer C",
-        answer7D: "This is answer D",
+        question7: "The Clone Wars were between...",
+        answer7A: "Episodes I and II",
+        answer7B: "Episodes II and III",
+        answer7C: "Episodes III and IV",
+        answer7D: "Episodes IV and V",
         rightAnswer7: "B"
     };
 
     var Q8 = {
-        questionNumber8: "Question #8",
-        question8: "What is the Question 8 ?",
-        answer8A: "This is answer A",
-        answer8B: "This is answer B",
-        answer8C: "This is answer C",
-        answer8D: "This is answer D",
-        rightAnswer8: "C"
+        questionNumber8: "#8",
+        question8: "Which major battle did the Rebel Alliance lose?",
+        answer8A: "Battle of Yavin IV",
+        answer8B: "Battle of Hoth",
+        answer8C: "Battle of Endor",
+        answer8D: "Battle of Death Star III",
+        rightAnswer8: "B"
     };
 
     var Q9 = {
-        questionNumber9: "Question #9",
-        question9: "What is the Question 9 ?",
-        answer9A: "This is answer A",
-        answer9B: "This is answer B",
-        answer9C: "This is answer C",
-        answer9D: "This is answer D",
-        rightAnswer4: "D"
+        questionNumber9: "#9",
+        question9: "Luke Skywalker is the son of whom?",
+        answer9A: "Anakin and Padme",
+        answer9B: "Vader and Shmi",
+        answer9C: "Palpatine and Asajj Ventress",
+        answer9D: "Han and Leia",
+        rightAnswer9: "A"
     };
 
     var Q10 = {
-        questionNumber10: "Question #10",
-        question10: "What is the Question 10 ?",
-        answer10A: "This is answer A",
-        answer10B: "This is answer B",
-        answer10C: "This is answer C",
-        answer10D: "This is answer D",
-        rightAnswer10: "A"
+        questionNumber10: "#10",
+        question10: "Who said the following:\n" + "\"No, I am your Father!\"",
+        answer10A: "Luke Skywalker",
+        answer10B: "Emperor Palpatine",
+        answer10C: "Darth Vader",
+        answer10D: "Harry Potter",
+        rightAnswer10: "C"
     };
-
-
 
 
     ///////////////////////////////////////////////////////////
@@ -272,7 +299,6 @@ $(document).ready(function () {
     }
 
 
-
     ///////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////
@@ -287,33 +313,50 @@ $(document).ready(function () {
     function answerCheck1() {
         $(".answer1A").on("click", function () {
             if (Q1.rightAnswer1 === "A") {
-                correctQ1()
+                correctScore = correctScore + 1;
+                correctQ1();
+
+
             } else {
-                wrongQ1()
+                wrongScore = wrongScore + 1;
+                wrongQ1();
+
             }
         });
 
         $(".answer1B").on("click", function () {
             if (Q1.rightAnswer1 === "B") {
-                correctQ1()
+                correctScore = correctScore + 1;
+                correctQ1();
+
             } else {
-                wrongQ1()
+                wrongScore = wrongScore + 1;
+                wrongQ1();
+
             }
         });
 
         $(".answer1C").on("click", function () {
             if (Q1.rightAnswer1 === "C") {
-                correctQ1()
+                correctScore = correctScore + 1;
+                correctQ1();
+
             } else {
-                wrongQ1()
+                wrongScore = wrongScore + 1;
+                wrongQ1();
+
             }
         });
 
         $(".answer1D").on("click", function () {
             if (Q1.rightAnswer1 === "D") {
-                correctQ1()
+                correctScore = correctScore + 1;
+                correctQ1();
+
             } else {
-                wrongQ1()
+                wrongScore = wrongScore + 1;
+                wrongQ1();
+
             }
         });
     }
@@ -323,24 +366,30 @@ $(document).ready(function () {
         $(".answer2A").on("click", function () {
             if (Q2.rightAnswer2 === "A") {
                 correctQ2()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ2()
+                wrongScore = wrongScore + 1;
             }
         });
 
         $(".answer2B").on("click", function () {
             if (Q2.rightAnswer2 === "B") {
                 correctQ2()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ2()
+                wrongScore = wrongScore + 1;
             }
         });
 
         $(".answer2C").on("click", function () {
             if (Q2.rightAnswer2 === "C") {
                 correctQ2()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ2()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -348,8 +397,10 @@ $(document).ready(function () {
 
             if (Q2.rightAnswer2 === "D") {
                 correctQ2()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ2()
+                wrongScore = wrongScore + 1;
             }
         });
     }
@@ -360,32 +411,40 @@ $(document).ready(function () {
         $(".answer3A").on("click", function () {
             if (Q3.rightAnswer3 === "A") {
                 correctQ3()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ3()
+                wrongScore = wrongScore + 1;
             }
         });
 
         $(".answer3B").on("click", function () {
             if (Q3.rightAnswer3 === "B") {
                 correctQ3()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ3()
+                wrongScore = wrongScore + 1;
             }
         });
 
         $(".answer3C").on("click", function () {
             if (Q3.rightAnswer3 === "C") {
                 correctQ3()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ3()
+                wrongScore = wrongScore + 1;
             }
         });
 
         $(".answer3D").on("click", function () {
             if (Q3.rightAnswer3 === "D") {
                 correctQ3()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ3()
+                wrongScore = wrongScore + 1;
             }
         });
     }
@@ -397,8 +456,10 @@ $(document).ready(function () {
 
             if (Q4.rightAnswer4 === "A") {
                 correctQ4()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ4()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -406,8 +467,10 @@ $(document).ready(function () {
 
             if (Q4.rightAnswer4 === "B") {
                 correctQ4()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ4()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -415,8 +478,10 @@ $(document).ready(function () {
 
             if (Q4.rightAnswer4 === "C") {
                 correctQ4()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ4()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -424,8 +489,10 @@ $(document).ready(function () {
 
             if (Q4.rightAnswer4 === "D") {
                 correctQ4()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ4()
+                wrongScore = wrongScore + 1;
             }
         });
     }
@@ -437,8 +504,10 @@ $(document).ready(function () {
 
             if (Q5.rightAnswer5 === "A") {
                 correctQ5()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ5()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -446,8 +515,10 @@ $(document).ready(function () {
 
             if (Q5.rightAnswer5 === "B") {
                 correctQ5()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ5()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -455,8 +526,10 @@ $(document).ready(function () {
 
             if (Q5.rightAnswer5 === "C") {
                 correctQ5()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ5()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -464,8 +537,10 @@ $(document).ready(function () {
 
             if (Q5.rightAnswer5 === "D") {
                 correctQ5()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ5()
+                wrongScore = wrongScore + 1;
             }
         });
     }
@@ -477,8 +552,10 @@ $(document).ready(function () {
 
             if (Q6.rightAnswer6 === "A") {
                 correctQ6()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ6()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -486,8 +563,10 @@ $(document).ready(function () {
 
             if (Q6.rightAnswer6 === "B") {
                 correctQ6()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ6()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -495,8 +574,10 @@ $(document).ready(function () {
 
             if (Q6.rightAnswer6 === "C") {
                 correctQ6()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ6()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -504,8 +585,10 @@ $(document).ready(function () {
 
             if (Q6.rightAnswer6 === "D") {
                 correctQ6()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ6()
+                wrongScore = wrongScore + 1;
             }
         });
     }
@@ -517,8 +600,10 @@ $(document).ready(function () {
 
             if (Q7.rightAnswer7 === "A") {
                 correctQ7()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ7()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -526,8 +611,10 @@ $(document).ready(function () {
 
             if (Q7.rightAnswer7 === "B") {
                 correctQ7()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ7()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -535,8 +622,10 @@ $(document).ready(function () {
 
             if (Q7.rightAnswer7 === "C") {
                 correctQ7()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ7()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -544,8 +633,10 @@ $(document).ready(function () {
 
             if (Q7.rightAnswer7 === "D") {
                 correctQ7()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ7()
+                wrongScore = wrongScore + 1;
             }
         });
     }
@@ -557,8 +648,10 @@ $(document).ready(function () {
 
             if (Q8.rightAnswer8 === "A") {
                 correctQ8()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ8()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -566,8 +659,10 @@ $(document).ready(function () {
 
             if (Q8.rightAnswer8 === "B") {
                 correctQ8()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ8()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -575,8 +670,10 @@ $(document).ready(function () {
 
             if (Q8.rightAnswer8 === "C") {
                 correctQ8()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ8()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -584,8 +681,10 @@ $(document).ready(function () {
 
             if (Q8.rightAnswer8 === "D") {
                 correctQ8()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ8()
+                wrongScore = wrongScore + 1;
             }
         });
     }
@@ -597,8 +696,10 @@ $(document).ready(function () {
 
             if (Q9.rightAnswer9 === "A") {
                 correctQ9()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ9()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -606,8 +707,10 @@ $(document).ready(function () {
 
             if (Q9.rightAnswer9 === "B") {
                 correctQ9()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ9()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -615,8 +718,10 @@ $(document).ready(function () {
 
             if (Q9.rightAnswer9 === "C") {
                 correctQ9()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ9()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -624,8 +729,10 @@ $(document).ready(function () {
 
             if (Q9.rightAnswer9 === "D") {
                 correctQ9()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ9()
+                wrongScore = wrongScore + 1;
             }
         });
     }
@@ -637,8 +744,10 @@ $(document).ready(function () {
 
             if (Q10.rightAnswer10 === "A") {
                 correctQ10()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ10()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -646,8 +755,10 @@ $(document).ready(function () {
 
             if (Q10.rightAnswer10 === "B") {
                 correctQ10()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ10()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -655,8 +766,10 @@ $(document).ready(function () {
 
             if (Q10.rightAnswer10 === "C") {
                 correctQ10()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ10()
+                wrongScore = wrongScore + 1;
             }
         });
 
@@ -664,36 +777,33 @@ $(document).ready(function () {
 
             if (Q10.rightAnswer10 === "D") {
                 correctQ10()
+                correctScore = correctScore + 1;
             } else {
                 wrongQ10()
+                wrongScore = wrongScore + 1;
             }
         });
     }
 
 
-
-
-
-
-
-
-
-
 // Question 1 to 2
     function correctQ1() {
         $(".Q1theFourQuestions").hide();
+
+
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ1").text("CORRECT!");
         });
+
         $("#Q1").hide();
         $("#Q2").show();
     }
 
     function wrongQ1() {
-        $(".Q9theFourQuestions").hide();
-        setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
-        });
+        $(".Q1theFourQuestions").hide();
+
+        $(".wrongQ1").text("WRONG!").hide(1000);
+
         $("#Q1").hide();
         $("#Q2").show();
     }
@@ -702,16 +812,16 @@ $(document).ready(function () {
     function correctQ2() {
         $(".Q2theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ2").text("CORRECT!").hide(1000);
         });
         $("#Q2").hide();
         $("#Q3").show();
     }
 
     function wrongQ2() {
-        $(".Q9theFourQuestions").hide();
+        $(".Q2theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ2").text("WRONG!").hide(1000);
         });
         $("#Q2").hide();
         $("#Q3").show();
@@ -721,16 +831,16 @@ $(document).ready(function () {
     function correctQ3() {
         $(".Q3theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ3").text("CORRECT!").hide(1000);
         });
         $("#Q3").hide();
         $("#Q4").show();
     }
 
     function wrongQ3() {
-        $(".Q9theFourQuestions").hide();
+        $(".Q3theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ3").text("WRONG!").hide(1000);
         });
         $("#Q3").hide();
         $("#Q4").show();
@@ -740,16 +850,16 @@ $(document).ready(function () {
     function correctQ4() {
         $(".Q4theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ4").text("CORRECT!").hide(1000);
         });
         $("#Q4").hide();
         $("#Q5").show();
     }
 
     function wrongQ4() {
-        $(".Q9theFourQuestions").hide();
+        $(".Q4theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ4").text("WRONG!").hide(1000);
         });
         $("#Q4").hide();
         $("#Q5").show();
@@ -759,16 +869,16 @@ $(document).ready(function () {
     function correctQ5() {
         $(".Q5theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ5").text("CORRECT!").hide(1000);
         });
         $("#Q5").hide();
         $("#Q6").show();
     }
 
     function wrongQ5() {
-        $(".Q9theFourQuestions").hide();
+        $(".Q5theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ5").text("WRONG!").hide(1000);
         });
         $("#Q5").hide();
         $("#Q6").show();
@@ -778,35 +888,35 @@ $(document).ready(function () {
     function correctQ6() {
         $(".Q6theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ6").text("CORRECT!").hide(1000);
         });
         $("#Q6").hide();
         $("#Q7").show();
     }
 
     function wrongQ6() {
-        $(".Q9theFourQuestions").hide();
+        $(".Q6theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ6").text("WRONG!").hide(1000);
         });
         $("#Q6").hide();
         $("#Q7").show();
     }
 
-    // Question 8 to 8
+    // Question 7 to 8
     function correctQ7() {
         $(".Q7theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ7").text("CORRECT!").hide(1000);
         });
         $("#Q7").hide();
         $("#Q8").show();
     }
 
     function wrongQ7() {
-        $(".Q9theFourQuestions").hide();
+        $(".Q7theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ7").text("WRONG!").hide(1000);
         });
         $("#Q7").hide();
         $("#Q8").show();
@@ -817,16 +927,16 @@ $(document).ready(function () {
     function correctQ8() {
         $(".Q8theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ8").text("CORRECT!").hide(1000);
         });
         $("#Q8").hide();
         $("#Q9").show();
     }
 
     function wrongQ8() {
-        $(".Q9theFourQuestions").hide();
+        $(".Q8theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ8").text("WRONG!").hide(1000);
         });
         $("#Q8").hide();
         $("#Q9").show();
@@ -836,7 +946,7 @@ $(document).ready(function () {
     function correctQ9() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ9").text("CORRECT!").hide(1000);
         });
         $("#Q9").hide();
         $("#Q10").show();
@@ -845,7 +955,7 @@ $(document).ready(function () {
     function wrongQ9() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ9").text("WRONG!").hide(1000);
         });
         $("#Q9").hide();
         $("#Q10").show();
@@ -855,7 +965,7 @@ $(document).ready(function () {
     function correctQ10() {
         $(".Q10theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(2000);
+            $(".correctQ10").text("CORRECT!").hide(1000);
         });
         $("#Q10").hide();
         $("#doneWithTrivia").show();
@@ -864,12 +974,11 @@ $(document).ready(function () {
     function wrongQ10() {
         $(".Q10theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").hide(2000);
+            $(".wrongQ10").text("WRONG!").hide(1000);
         });
         $("#Q10").hide();
         $("#doneWithTrivia").show();
     }
-
 
 
 });

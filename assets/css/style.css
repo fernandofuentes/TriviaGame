@@ -8,8 +8,6 @@ body {
     background-attachment: fixed;
 }
 
-
-
 h1, h2, h3, h4, h5, h6 {
     font-family: proxima-nova, sans-serif;
     font-style: normal;
@@ -41,7 +39,7 @@ h2 {
 
 .logo {
     margin-top: 50px;
-width: 55%;
+    width: 55%;
 }
 
 .question {
@@ -69,13 +67,31 @@ width: 55%;
     margin-top: 50px;
 }
 
-.correct {
+.correctQ1,
+.correctQ2,
+.correctQ3,
+.correctQ4,
+.correctQ5,
+.correctQ6,
+.correctQ7,
+.correctQ8,
+.correctQ9,
+.correctQ10 {
     text-align: center;
     color: lime;
     font-size: 10em;
 }
 
-.wrong {
+.wrongQ1,
+.wrongQ2,
+.wrongQ3,
+.wrongQ4,
+.wrongQ5,
+.wrongQ6,
+.wrongQ7,
+.wrongQ8,
+.wrongQ9,
+.wrongQ10, {
     text-align: center;
     color: red;
     font-size: 10em;
@@ -103,7 +119,7 @@ button.answerButton:hover {
 }
 
 button#startButton {
-    margin-top:50px;
+    margin-top: 50px;
     background-color: #eeeeee;
     color: #222222;
     font-size: 1.5em;
@@ -121,6 +137,7 @@ button#startButton:hover {
 .pTimer {
     text-align: center;
 }
+
 /*
 
 <input type="radio" value="A" />
