@@ -24,10 +24,12 @@ $(document).ready(function () {
 
             $("#questionsRow").show();
             $(".pTimer").show();
+
             var count = 60, timer = setInterval(function () {
                 $(".timer").html(count--);
                 if (count === 0) clearInterval(timer);
             }, 1000);
+
             $("#startButton").hide();
             $("#Q1").show();
 
@@ -594,36 +596,36 @@ $(document).ready(function () {
         $(".answer9A").on("click", function () {
 
             if (Q9.rightAnswer9 === "A") {
-                correct()
+                correctQ9()
             } else {
-                wrong()
+                wrongQ9()
             }
         });
 
         $(".answer9B").on("click", function () {
 
             if (Q9.rightAnswer9 === "B") {
-                correct()
+                correctQ9()
             } else {
-                wrong()
+                wrongQ9()
             }
         });
 
         $(".answer9C").on("click", function () {
 
             if (Q9.rightAnswer9 === "C") {
-                correct()
+                correctQ9()
             } else {
-                wrong()
+                wrongQ9()
             }
         });
 
         $(".answer9D").on("click", function () {
 
             if (Q9.rightAnswer9 === "D") {
-                correct()
+                correctQ9()
             } else {
-                wrong()
+                wrongQ9()
             }
         });
     }
@@ -634,36 +636,36 @@ $(document).ready(function () {
         $(".answer10A").on("click", function () {
 
             if (Q10.rightAnswer10 === "A") {
-                correct()
+                correctQ10()
             } else {
-                wrong()
+                wrongQ10()
             }
         });
 
         $(".answer10B").on("click", function () {
 
             if (Q10.rightAnswer10 === "B") {
-                correct()
+                correctQ10()
             } else {
-                wrong()
+                wrongQ10()
             }
         });
 
         $(".answer10C").on("click", function () {
 
             if (Q10.rightAnswer10 === "C") {
-                correct()
+                correctQ10()
             } else {
-                wrong()
+                wrongQ10()
             }
         });
 
         $(".answer10D").on("click", function () {
 
             if (Q10.rightAnswer10 === "D") {
-                correct()
+                correctQ10()
             } else {
-                wrong()
+                wrongQ10()
             }
         });
     }
@@ -681,7 +683,7 @@ $(document).ready(function () {
     function correctQ1() {
         $(".Q1theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(10000);
+            $(".correct").text("CORRECT!").hide(2000);
         });
         $("#Q1").hide();
         $("#Q2").show();
@@ -690,7 +692,7 @@ $(document).ready(function () {
     function wrongQ1() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").animate().hide(10000)
+            $(".wrong").text("WRONG!").hide(2000);
         });
         $("#Q1").hide();
         $("#Q2").show();
@@ -700,7 +702,7 @@ $(document).ready(function () {
     function correctQ2() {
         $(".Q2theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(20000);
+            $(".correct").text("CORRECT!").hide(2000);
         });
         $("#Q2").hide();
         $("#Q3").show();
@@ -709,7 +711,7 @@ $(document).ready(function () {
     function wrongQ2() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").animate().hide(20000)
+            $(".wrong").text("WRONG!").hide(2000);
         });
         $("#Q2").hide();
         $("#Q3").show();
@@ -719,7 +721,7 @@ $(document).ready(function () {
     function correctQ3() {
         $(".Q3theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(30000);
+            $(".correct").text("CORRECT!").hide(2000);
         });
         $("#Q3").hide();
         $("#Q4").show();
@@ -728,7 +730,7 @@ $(document).ready(function () {
     function wrongQ3() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").animate().hide(30000)
+            $(".wrong").text("WRONG!").hide(2000);
         });
         $("#Q3").hide();
         $("#Q4").show();
@@ -738,7 +740,7 @@ $(document).ready(function () {
     function correctQ4() {
         $(".Q4theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(40000);
+            $(".correct").text("CORRECT!").hide(2000);
         });
         $("#Q4").hide();
         $("#Q5").show();
@@ -747,7 +749,7 @@ $(document).ready(function () {
     function wrongQ4() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").animate().hide(40000)
+            $(".wrong").text("WRONG!").hide(2000);
         });
         $("#Q4").hide();
         $("#Q5").show();
@@ -757,7 +759,7 @@ $(document).ready(function () {
     function correctQ5() {
         $(".Q5theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(50000);
+            $(".correct").text("CORRECT!").hide(2000);
         });
         $("#Q5").hide();
         $("#Q6").show();
@@ -766,7 +768,7 @@ $(document).ready(function () {
     function wrongQ5() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").animate().hide(50000)
+            $(".wrong").text("WRONG!").hide(2000);
         });
         $("#Q5").hide();
         $("#Q6").show();
@@ -776,7 +778,7 @@ $(document).ready(function () {
     function correctQ6() {
         $(".Q6theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(60000);
+            $(".correct").text("CORRECT!").hide(2000);
         });
         $("#Q6").hide();
         $("#Q7").show();
@@ -785,17 +787,37 @@ $(document).ready(function () {
     function wrongQ6() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").animate().hide(60000)
+            $(".wrong").text("WRONG!").hide(2000);
         });
         $("#Q6").hide();
         $("#Q7").show();
     }
 
+    // Question 8 to 8
+    function correctQ7() {
+        $(".Q7theFourQuestions").hide();
+        setTimeout(function () {
+            $(".correct").text("CORRECT!").hide(2000);
+        });
+        $("#Q7").hide();
+        $("#Q8").show();
+    }
+
+    function wrongQ7() {
+        $(".Q9theFourQuestions").hide();
+        setTimeout(function () {
+            $(".wrong").text("WRONG!").hide(2000);
+        });
+        $("#Q7").hide();
+        $("#Q8").show();
+    }
+
+
 // Question 8 to 9
     function correctQ8() {
         $(".Q8theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(80000);
+            $(".correct").text("CORRECT!").hide(2000);
         });
         $("#Q8").hide();
         $("#Q9").show();
@@ -804,7 +826,7 @@ $(document).ready(function () {
     function wrongQ8() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").animate().hide(80000)
+            $(".wrong").text("WRONG!").hide(2000);
         });
         $("#Q8").hide();
         $("#Q9").show();
@@ -814,7 +836,7 @@ $(document).ready(function () {
     function correctQ9() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".correct").text("CORRECT!").hide(10000);
+            $(".correct").text("CORRECT!").hide(2000);
         });
         $("#Q9").hide();
         $("#Q10").show();
@@ -823,10 +845,29 @@ $(document).ready(function () {
     function wrongQ9() {
         $(".Q9theFourQuestions").hide();
         setTimeout(function () {
-            $(".wrong").text("WRONG!").animate().hide(10000)
+            $(".wrong").text("WRONG!").hide(2000);
         });
         $("#Q9").hide();
         $("#Q10").show();
+    }
+
+    // Question 10 to 10
+    function correctQ10() {
+        $(".Q10theFourQuestions").hide();
+        setTimeout(function () {
+            $(".correct").text("CORRECT!").hide(2000);
+        });
+        $("#Q10").hide();
+        $("#doneWithTrivia").show();
+    }
+
+    function wrongQ10() {
+        $(".Q10theFourQuestions").hide();
+        setTimeout(function () {
+            $(".wrong").text("WRONG!").hide(2000);
+        });
+        $("#Q10").hide();
+        $("#doneWithTrivia").show();
     }
 
 
