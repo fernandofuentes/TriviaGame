@@ -23,9 +23,111 @@
                          '-'
  */
 
+var correctScore = 0;
+var wrongScore = 0;
+
+var Q1 = {
+    questionNumber1: "#1",
+    question1: "Who is Luke's Daddy?",
+    answer1A: "Anakin",
+    answer1B: "Darth Fader",
+    answer1C: "Darth Mader",
+    answer1D: "Darth Wader",
+    rightAnswer1: "A"
+};
+
+var Q2 = {
+    questionNumber2: "#2",
+    question2: "Who directed the Star Wars movies?",
+    answer2A: "J K Rowling",
+    answer2B: "Charles Dickens",
+    answer2C: "William Shakespeare",
+    answer2D: "George Lucas",
+    rightAnswer2: "D"
+};
+
+var Q3 = {
+    questionNumber3: "#3",
+    question3: "What species is Count Dooku?",
+    answer3A: "Martian",
+    answer3B: "Humanoid",
+    answer3C: "Wookiee",
+    answer3D: "Gungan",
+    rightAnswer3: "B"
+};
+
+var Q4 = {
+    questionNumber4: "#4",
+    question4: "Who were the apprentices of Darth Sidious?",
+    answer4A: "Maul, Vader",
+    answer4B: "Anakin, Luke",
+    answer4C: "Darth Jedi, Darth Sith",
+    answer4D: "Darth Fader, Darth Mader",
+    rightAnswer4: "A"
+};
+
+var Q5 = {
+    questionNumber5: "#5",
+    question5: "How many Death Stars were built?",
+    answer5A: "1",
+    answer5B: "2",
+    answer5C: "5",
+    answer5D: "1 for every movie",
+    rightAnswer5: "B"
+};
+
+var Q6 = {
+    questionNumber6: "#6",
+    question6: "Who is fluent in over 6,000,000 forms of communication",
+    answer6A: "C-3PO",
+    answer6B: "R2-D2",
+    answer6C: "R4-P17",
+    answer6D: "Jar Jar",
+    rightAnswer6: "A"
+};
+
+var Q7 = {
+    questionNumber7: "#7",
+    question7: "The Clone Wars were between...",
+    answer7A: "Episodes I and II",
+    answer7B: "Episodes II and III",
+    answer7C: "Episodes III and IV",
+    answer7D: "Episodes IV and V",
+    rightAnswer7: "B"
+};
+
+var Q8 = {
+    questionNumber8: "#8",
+    question8: "Which major battle did the Rebel Alliance lose?",
+    answer8A: "Battle of Yavin IV",
+    answer8B: "Battle of Hoth",
+    answer8C: "Battle of Endor",
+    answer8D: "Battle of Death Star III",
+    rightAnswer8: "B"
+};
+
+var Q9 = {
+    questionNumber9: "#9",
+    question9: "Luke Skywalker is the son of whom?",
+    answer9A: "Anakin and Padme",
+    answer9B: "Vader and Shmi",
+    answer9C: "Palpatine and Asajj Ventress",
+    answer9D: "Han and Leia",
+    rightAnswer9: "A"
+};
+
+var Q10 = {
+    questionNumber10: "#10",
+    question10: "Who said the following:\n" + "\"No, I am your Father!\"",
+    answer10A: "Luke Skywalker",
+    answer10B: "Emperor Palpatine",
+    answer10C: "Darth Vader",
+    answer10D: "Harry Potter",
+    rightAnswer10: "C"
+};
+
+
 $(document).ready(function () {
-
-
     $(".pTimer").hide();
     // Hide questionsRow
     $("#questionsRow").hide();
@@ -44,6 +146,13 @@ $(document).ready(function () {
     // Start Button
 
     $("#startButton").click(function () {
+
+
+
+
+
+
+
 
         $('#kylo').get(0).play();
 
@@ -68,114 +177,14 @@ $(document).ready(function () {
         runQ8();
         runQ9();
         runQ10();
+        console.log(correctScore)
+        console.log(wrongScore)
     });
-
-    var correctScore = 0;
-    var wrongScore = 0;
 
 
     $("#numberCorrect").text(correctScore);
     $("#numberWrong").text(wrongScore);
 
-    var Q1 = {
-        questionNumber1: "#1",
-        question1: "Who is Luke's Daddy?",
-        answer1A: "Anakin",
-        answer1B: "Darth Fader",
-        answer1C: "Darth Mader",
-        answer1D: "Darth Wader",
-        rightAnswer1: "A"
-    };
-
-    var Q2 = {
-        questionNumber2: "#2",
-        question2: "Who directed the Star Wars movies?",
-        answer2A: "J K Rowling",
-        answer2B: "Charles Dickens",
-        answer2C: "William Shakespeare",
-        answer2D: "George Lucas",
-        rightAnswer2: "D"
-    };
-
-    var Q3 = {
-        questionNumber3: "#3",
-        question3: "What species is Count Dooku?",
-        answer3A: "Martian",
-        answer3B: "Humanoid",
-        answer3C: "Wookiee",
-        answer3D: "Gungan",
-        rightAnswer3: "B"
-    };
-
-    var Q4 = {
-        questionNumber4: "#4",
-        question4: "Who were the apprentices of Darth Sidious?",
-        answer4A: "Maul, Vader",
-        answer4B: "Anakin, Luke",
-        answer4C: "Darth Jedi, Darth Sith",
-        answer4D: "Darth Fader, Darth Mader",
-        rightAnswer4: "A"
-    };
-
-    var Q5 = {
-        questionNumber5: "#5",
-        question5: "How many Death Stars were built?",
-        answer5A: "1",
-        answer5B: "2",
-        answer5C: "5",
-        answer5D: "1 for every movie",
-        rightAnswer5: "B"
-    };
-
-    var Q6 = {
-        questionNumber6: "#6",
-        question6: "Who is fluent in over 6,000,000 forms of communication",
-        answer6A: "C-3PO",
-        answer6B: "R2-D2",
-        answer6C: "R4-P17",
-        answer6D: "Jar Jar",
-        rightAnswer6: "A"
-    };
-
-    var Q7 = {
-        questionNumber7: "#7",
-        question7: "The Clone Wars were between...",
-        answer7A: "Episodes I and II",
-        answer7B: "Episodes II and III",
-        answer7C: "Episodes III and IV",
-        answer7D: "Episodes IV and V",
-        rightAnswer7: "B"
-    };
-
-    var Q8 = {
-        questionNumber8: "#8",
-        question8: "Which major battle did the Rebel Alliance lose?",
-        answer8A: "Battle of Yavin IV",
-        answer8B: "Battle of Hoth",
-        answer8C: "Battle of Endor",
-        answer8D: "Battle of Death Star III",
-        rightAnswer8: "B"
-    };
-
-    var Q9 = {
-        questionNumber9: "#9",
-        question9: "Luke Skywalker is the son of whom?",
-        answer9A: "Anakin and Padme",
-        answer9B: "Vader and Shmi",
-        answer9C: "Palpatine and Asajj Ventress",
-        answer9D: "Han and Leia",
-        rightAnswer9: "A"
-    };
-
-    var Q10 = {
-        questionNumber10: "#10",
-        question10: "Who said the following:\n" + "\"No, I am your Father!\"",
-        answer10A: "Luke Skywalker",
-        answer10B: "Emperor Palpatine",
-        answer10C: "Darth Vader",
-        answer10D: "Harry Potter",
-        rightAnswer10: "C"
-    };
 
 
     ///////////////////////////////////////////////////////////
@@ -313,12 +322,12 @@ $(document).ready(function () {
     function answerCheck1() {
         $(".answer1A").on("click", function () {
             if (Q1.rightAnswer1 === "A") {
-                correctScore = correctScore + 1;
+                correctScore += 1;
                 correctQ1();
 
 
             } else {
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
                 wrongQ1();
 
             }
@@ -326,11 +335,11 @@ $(document).ready(function () {
 
         $(".answer1B").on("click", function () {
             if (Q1.rightAnswer1 === "B") {
-                correctScore = correctScore + 1;
+                correctScore += 1;
                 correctQ1();
 
             } else {
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
                 wrongQ1();
 
             }
@@ -338,11 +347,11 @@ $(document).ready(function () {
 
         $(".answer1C").on("click", function () {
             if (Q1.rightAnswer1 === "C") {
-                correctScore = correctScore + 1;
+                correctScore += 1;
                 correctQ1();
 
             } else {
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
                 wrongQ1();
 
             }
@@ -350,11 +359,11 @@ $(document).ready(function () {
 
         $(".answer1D").on("click", function () {
             if (Q1.rightAnswer1 === "D") {
-                correctScore = correctScore + 1;
+                correctScore += 1;
                 correctQ1();
 
             } else {
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
                 wrongQ1();
 
             }
@@ -366,30 +375,30 @@ $(document).ready(function () {
         $(".answer2A").on("click", function () {
             if (Q2.rightAnswer2 === "A") {
                 correctQ2()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ2()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
         $(".answer2B").on("click", function () {
             if (Q2.rightAnswer2 === "B") {
                 correctQ2()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ2()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
         $(".answer2C").on("click", function () {
             if (Q2.rightAnswer2 === "C") {
                 correctQ2()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ2()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -397,10 +406,10 @@ $(document).ready(function () {
 
             if (Q2.rightAnswer2 === "D") {
                 correctQ2()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ2()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -411,40 +420,40 @@ $(document).ready(function () {
         $(".answer3A").on("click", function () {
             if (Q3.rightAnswer3 === "A") {
                 correctQ3()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ3()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
         $(".answer3B").on("click", function () {
             if (Q3.rightAnswer3 === "B") {
                 correctQ3()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ3()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
         $(".answer3C").on("click", function () {
             if (Q3.rightAnswer3 === "C") {
                 correctQ3()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ3()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
         $(".answer3D").on("click", function () {
             if (Q3.rightAnswer3 === "D") {
                 correctQ3()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ3()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -456,10 +465,10 @@ $(document).ready(function () {
 
             if (Q4.rightAnswer4 === "A") {
                 correctQ4()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ4()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -467,10 +476,10 @@ $(document).ready(function () {
 
             if (Q4.rightAnswer4 === "B") {
                 correctQ4()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ4()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -478,10 +487,10 @@ $(document).ready(function () {
 
             if (Q4.rightAnswer4 === "C") {
                 correctQ4()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ4()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -489,10 +498,10 @@ $(document).ready(function () {
 
             if (Q4.rightAnswer4 === "D") {
                 correctQ4()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ4()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -504,10 +513,10 @@ $(document).ready(function () {
 
             if (Q5.rightAnswer5 === "A") {
                 correctQ5()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ5()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -515,10 +524,10 @@ $(document).ready(function () {
 
             if (Q5.rightAnswer5 === "B") {
                 correctQ5()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ5()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -526,10 +535,10 @@ $(document).ready(function () {
 
             if (Q5.rightAnswer5 === "C") {
                 correctQ5()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ5()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -537,10 +546,10 @@ $(document).ready(function () {
 
             if (Q5.rightAnswer5 === "D") {
                 correctQ5()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ5()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -552,10 +561,10 @@ $(document).ready(function () {
 
             if (Q6.rightAnswer6 === "A") {
                 correctQ6()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ6()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -563,10 +572,10 @@ $(document).ready(function () {
 
             if (Q6.rightAnswer6 === "B") {
                 correctQ6()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ6()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -574,10 +583,10 @@ $(document).ready(function () {
 
             if (Q6.rightAnswer6 === "C") {
                 correctQ6()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ6()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -585,10 +594,10 @@ $(document).ready(function () {
 
             if (Q6.rightAnswer6 === "D") {
                 correctQ6()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ6()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -600,10 +609,10 @@ $(document).ready(function () {
 
             if (Q7.rightAnswer7 === "A") {
                 correctQ7()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ7()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -611,10 +620,10 @@ $(document).ready(function () {
 
             if (Q7.rightAnswer7 === "B") {
                 correctQ7()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ7()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -622,10 +631,10 @@ $(document).ready(function () {
 
             if (Q7.rightAnswer7 === "C") {
                 correctQ7()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ7()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -633,10 +642,10 @@ $(document).ready(function () {
 
             if (Q7.rightAnswer7 === "D") {
                 correctQ7()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ7()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -648,10 +657,10 @@ $(document).ready(function () {
 
             if (Q8.rightAnswer8 === "A") {
                 correctQ8()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ8()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -659,10 +668,10 @@ $(document).ready(function () {
 
             if (Q8.rightAnswer8 === "B") {
                 correctQ8()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ8()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -670,10 +679,10 @@ $(document).ready(function () {
 
             if (Q8.rightAnswer8 === "C") {
                 correctQ8()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ8()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -681,10 +690,10 @@ $(document).ready(function () {
 
             if (Q8.rightAnswer8 === "D") {
                 correctQ8()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ8()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -696,10 +705,10 @@ $(document).ready(function () {
 
             if (Q9.rightAnswer9 === "A") {
                 correctQ9()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ9()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -707,10 +716,10 @@ $(document).ready(function () {
 
             if (Q9.rightAnswer9 === "B") {
                 correctQ9()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ9()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -718,10 +727,10 @@ $(document).ready(function () {
 
             if (Q9.rightAnswer9 === "C") {
                 correctQ9()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ9()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -729,10 +738,10 @@ $(document).ready(function () {
 
             if (Q9.rightAnswer9 === "D") {
                 correctQ9()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ9()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -744,10 +753,10 @@ $(document).ready(function () {
 
             if (Q10.rightAnswer10 === "A") {
                 correctQ10()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ10()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -755,10 +764,10 @@ $(document).ready(function () {
 
             if (Q10.rightAnswer10 === "B") {
                 correctQ10()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ10()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -766,10 +775,10 @@ $(document).ready(function () {
 
             if (Q10.rightAnswer10 === "C") {
                 correctQ10()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ10()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
 
@@ -777,10 +786,10 @@ $(document).ready(function () {
 
             if (Q10.rightAnswer10 === "D") {
                 correctQ10()
-                correctScore = correctScore + 1;
+                correctScore += 1;
             } else {
                 wrongQ10()
-                wrongScore = wrongScore + 1;
+                wrongScore += 1;
             }
         });
     }
@@ -968,7 +977,8 @@ $(document).ready(function () {
             $(".correctQ10").text("CORRECT!").hide(1000);
         });
         $("#Q10").hide();
-        $("#doneWithTrivia").show();
+        $(".pTimer").hide();
+        $("#startButton").show();
     }
 
     function wrongQ10() {
@@ -976,11 +986,11 @@ $(document).ready(function () {
         setTimeout(function () {
             $(".wrongQ10").text("WRONG!").hide(1000);
         });
+
         $("#Q10").hide();
-        $("#doneWithTrivia").show();
+        $(".pTimer").hide();
+        $("#startButton").show();
     }
-
-
 });
 
 
